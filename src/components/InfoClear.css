@@ -1,0 +1,22 @@
+
+.info-clear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-pending {
+    font-size: 1.4rem;
+}
+
+.info-clear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-btn {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 1rem;
+    font-weight: 700;
+}

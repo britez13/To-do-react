@@ -1,0 +1,46 @@
+
+.items-container {
+    width: 100%;
+}
+
+.item {
+    background-color: var(--main-bg-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.item-name {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.item-name label {
+    color: var(--gray);
+    overflow: auto;
+    font-size: 1.6rem;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+svg {
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: var(--red);
+}
+
