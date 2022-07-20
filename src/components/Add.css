@@ -9,6 +9,8 @@
 
 .add-input {
     flex-grow: 1;
+    border-radius: 5rem;
+    border-style:double ;
 }
 
 .add-btn {
@@ -16,4 +18,9 @@
     font-weight: 400;
     font-size: 2rem;
     padding: .5rem 1.3rem;
+    transition: filter .5s;
+}
+
+.add-btn:hover {
+    filter: brightness(85%);
 }

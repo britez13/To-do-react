@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 import "./Update.css";
 
 const Update = ({setIsUpdate, itemToUpdate, setData}) => {
@@ -26,7 +27,16 @@ const Update = ({setIsUpdate, itemToUpdate, setData}) => {
     setIsUpdate(false)
   }
   return (
-    <section className="modal-bg">
+    <AnimatePresence>
+    <motion.section 
+    className="modal-bg"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={
+      {duration: .5}
+    }
+    exit={{ x: -400, opacity: 0 }}
+    >
       <div className="modal-wrapper" >
         <form className="modal-form">
           <input autoFocus type="text" value={todo} onChange={handleChange}/>
@@ -36,7 +46,8 @@ const Update = ({setIsUpdate, itemToUpdate, setData}) => {
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
+    </AnimatePresence>
   )
 }
 

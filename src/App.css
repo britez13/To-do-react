@@ -1,14 +1,14 @@
 :root {
-  --main-bg-color: hsl(216, 6%, 84%);
+  --main-bg-color: hsl(180, 40%, 94%);
   --card-bg-color: hsl(216, 50%, 16%);
-  --red: hsl(0, 79%, 39%);
+  --red: #ee1b3e;
   --dark-red: hsl(0, 74%, 33%);
   --green: hsl(120, 63%, 33%);
   --dark-green: hsl(120, 87%, 15%);
   --white: hsl(0, 0%, 100%);
   --gray: hsl(0, 2%, 24%);
-  --ligh-gray: rgb(214, 216, 216);
-  --sky-blue: rgb(22, 151, 130);
+  --light-gray: rgb(214, 216, 216);
+  --sky-blue: #169782;
 
 }
 
@@ -19,16 +19,20 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  height: 100vh;
-  width: 100%;
+  display: inline-block;
   margin: 0;
-  background-color: var(--main-bg-color);
+  padding: 0;
+  background-color: var(--sky-blue);
   position: relative;
+  min-height: 100vh;
+  width: 100%;
 }
 
 h1, p, div {
@@ -36,11 +40,12 @@ h1, p, div {
 }
 
 input {
+  caret-color: var(--sky-blue);
   font-size: 1.5rem;
   color: var(--gray);
-  border-color: var(--ligh-gray);
+  border-color: var(--light-gray);
   padding: .8rem 1rem;
-  outline-color: var(--ligh-gray);
+  outline-color: var(--light-gray);
 }
 
 button {
@@ -53,19 +58,24 @@ button {
 .main-container {
   padding: 4rem 2rem;
   background-color: var(--white);
+  /* box-shadow: 4px 4px 10px var(--light-gray); */
   border-radius: .5rem;
-  width: min(100%, 600px);
+  width: min(100% - 3rem , 600px);
+  min-height: 30rem;
+  margin-top: 2rem;
   margin-inline: auto;
 }
 
 @media (min-width: 600px) { 
   .main-container {
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding: 5rem;
   }
 } 
 
 .title {
+  text-align: center;
+  color: var(--sky-blue);
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;

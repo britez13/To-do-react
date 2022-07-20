@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {motion} from 'framer-motion';
 import { v4 as uuid } from 'uuid';
 import "./Add.css";
 
@@ -16,10 +17,24 @@ const Add = ({setData}) => {
     setTodo("")
   }
   return (
-    <form className="add-form">
+    <motion.form 
+    className="add-form"
+    initial={
+      {x: -1000, opacity: 0}
+    }
+    animate={
+      {x: 0, opacity: 1}
+    }
+    transition={
+      {
+        duration: 2,
+        delay: 1.5
+      }
+    }
+    >
         <input className="add-input" autoFocus type="text" placeholder="New to-do" value={todo} onChange={handleChange} />
         <button className="add-btn" type="submit" onClick={handleAdd} >+</button>
-    </form>
+    </motion.form>
   )
 }
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'; 
+import {motion} from 'framer-motion';
 import Add from './components/Add';
 import List from './components/List';
 import InfoClear from './components/InfoClear';
@@ -16,12 +17,46 @@ function App() {
   return (
     <>
       {isUpdate && <Update setIsUpdate={setIsUpdate} itemToUpdate={itemToUpdate} setData={setData} />}  
-      <main className="main-container">
-      <h1 className='title'>To-do App</h1>
+      <motion.main className="main-container"
+      initial={
+        {
+          y: "-40rem"
+        }
+      }
+      animate={
+        {
+          y: 0
+        }
+      }
+      transition= {
+        {
+          duration: 1.5
+        }
+      }
+      >
+      <motion.h1 
+        className='title'
+        initial= {
+          {
+            opacity: 0
+          } 
+        }
+        animate={
+          {
+            opacity: 1,
+            transition: {
+              duration: 2,
+              delay: 1.5
+            }
+          }
+        }
+        >
+        To-do App
+      </motion.h1>
       <Add setData={setData} />
       <List data={data} setData={setData} changeUpdate={changeUpdate} setItemToUpdate={setItemToUpdate} />
       <InfoClear data={data} setData={setData} />
-      </main>
+      </motion.main>
     </>
   );
 }

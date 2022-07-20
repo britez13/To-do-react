@@ -17,6 +17,7 @@
 
 .item-name {
     display: flex;
+    align-items: center;
     overflow: auto;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -25,7 +26,7 @@
 .item-name label {
     color: var(--gray);
     overflow: auto;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .item-actions {
@@ -39,8 +40,60 @@ svg {
     cursor: pointer;
 }
 
+.update-logo, .delete-logo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s;
+}
+
+.update-logo:hover, .delete-logo:hover { 
+    background-color: var(--light-gray);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--light-gray);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: background-color .5s;
+}
+
+input[type="checkbox"]:after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--white);
+    display: none;
+}
+
+input[type="checkbox"]:hover {
+   background-color: var(--sky-blue); 
+  
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--sky-blue);
+}
+
+input[type="checkbox"]:checked:after {
+    display: block;
+}
+
 .completed {
+    font-style: italic;
     text-decoration: line-through;
-    color: var(--red);
+    text-decoration-color: var(--sky-blue);
+    text-decoration-thickness: .25rem;
 }
 
