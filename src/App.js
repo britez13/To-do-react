@@ -45,25 +45,7 @@ function App() {
         }
       }
       >
-      <motion.h1 
-        className='title'
-        initial= {
-          {
-            opacity: 0
-          } 
-        }
-        animate={
-          {
-            opacity: 1,
-            transition: {
-              duration: 2,
-              delay: 1.5
-            }
-          }
-        }
-        >
-        To-do App
-      </motion.h1>
+      <h1 className='title'>To-do App</h1>
       <Add setData={setData} />
       <List data={data} setData={setData} changeUpdate={changeUpdate} setItemToUpdate={setItemToUpdate} />
       <InfoClear data={data} setData={setData} />
