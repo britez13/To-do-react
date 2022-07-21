@@ -78,9 +78,16 @@ input[type="checkbox"]:after {
     display: none;
 }
 
-input[type="checkbox"]:hover {
-   background-color: var(--sky-blue); 
-  
+@media (hover: hover) {
+    input[type="checkbox"]:hover {
+        background-color: var(--sky-blue);  
+     }
+}
+
+@media (hover: none) {
+    input[type="checkbox"]:hover {
+        background-color: var(--white);  
+     }
 }
 
 input[type="checkbox"]:checked {
