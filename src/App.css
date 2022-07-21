@@ -1,14 +1,11 @@
 :root {
-  --main-bg-color: hsl(180, 40%, 94%);
-  --card-bg-color: hsl(216, 50%, 16%);
-  --red: #ee1b3e;
-  --dark-red: hsl(0, 74%, 33%);
-  --green: hsl(120, 63%, 33%);
-  --dark-green: hsl(120, 87%, 15%);
+  --red: hsl(350, 86%, 52%);
   --white: hsl(0, 0%, 100%);
   --gray: hsl(0, 2%, 24%);
   --light-gray: rgb(214, 216, 216);
-  --sky-blue: #169782;
+  --sky-blue: hsl(170, 75%, 34%);
+  --black: hsla(0, 0%, 0%, 0.774);
+  --dark-blue: hsla(233, 27%, 6%, 0.59);
 
 }
 
@@ -58,7 +55,6 @@ button {
 .main-container {
   padding: 4rem 2rem;
   background-color: var(--white);
-  /* box-shadow: 4px 4px 10px var(--light-gray); */
   border-radius: .5rem;
   width: min(100% - 3rem , 600px);
   min-height: 30rem;

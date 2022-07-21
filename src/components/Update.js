@@ -39,7 +39,7 @@ const Update = ({setIsUpdate, itemToUpdate, setData}) => {
     >
       <div className="modal-wrapper" >
         <form className="modal-form">
-          <input autoFocus type="text" value={todo} onChange={handleChange}/>
+          <input className="modal-input" autoFocus type="text" value={todo} onChange={handleChange}/>
           <div className="btn-wrapper">
             <button type="submit" className="update-btn" onClick={handleUpdate} >Update</button>
             <button className="cancel-btn" onClick={handleCancel}>Cancel</button>

@@ -1,4 +1,4 @@
-import { useState } from 'react'; 
+import { useState,useEffect } from 'react'; 
 import {motion} from 'framer-motion';
 import Add from './components/Add';
 import List from './components/List';
@@ -7,10 +7,21 @@ import Update from "./components/Update";
 import './App.css';
 
 function App() {
-
   const [data, setData] = useState([]);
   const [isUpdate, setIsUpdate] = useState(false);
   const [itemToUpdate, setItemToUpdate] = useState({});
+
+  useEffect(() => {
+    const oldData = localStorage.getItem("todos")
+    if(oldData) {
+      setData(JSON.parse(oldData))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(data))
+  })
+
   const changeUpdate = () => {
     setIsUpdate(prev => !prev)
   }

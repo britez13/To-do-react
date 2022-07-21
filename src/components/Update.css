@@ -13,7 +13,7 @@
 }
 
 .modal-wrapper {
-    background-color: var(--main-bg-color);
+    background-color: var(--dark-blue);
     width: min(100% - 5rem, 300px);
     border-radius: .5rem;
     padding-block: 10rem;
@@ -25,6 +25,13 @@
     justify-content: space-around;
     gap: 2rem;
     align-items: center;
+}
+
+.modal-input {
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    
 }
 
 .btn-wrapper {

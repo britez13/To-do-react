@@ -9,6 +9,20 @@
     font-size: 1.4rem;
 }
 
+.no-todo {
+    text-decoration: underline;
+    text-decoration-color: var(--sky-blue);
+    text-decoration-thickness: .25rem;
+    text-decoration-skip-ink: none;
+}
+
+.some-todo {
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: .25rem;
+    text-decoration-skip-ink: none;
+}
+
 .info-clear {
     display: flex;
     justify-content: space-between;

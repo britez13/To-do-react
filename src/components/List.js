@@ -1,4 +1,4 @@
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 import { ReactComponent as DeleteLogo } from '../assets/delete-svgrepo-com.svg';
 import { ReactComponent as UpdateLogo } from '../assets/pencil-with-eraser-svgrepo-com.svg';
 import "./List.css"

@@ -4,7 +4,7 @@
 }
 
 .item {
-    background-color: var(--main-bg-color);
+    background-color: var(--light-gray);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -51,14 +51,15 @@ svg {
 }
 
 .update-logo:hover, .delete-logo:hover { 
-    background-color: var(--light-gray);
+    background-color: var(--white);
 }
 
 input[type="checkbox"] {
     appearance: none;
     height: 2rem;
     width: 2rem;
-    background-color: var(--light-gray);
+    background-color: var(--white);
+    border: 1px solid var(--sky-blue);
     border-radius: .3rem;
     cursor: pointer;
     display: flex;
