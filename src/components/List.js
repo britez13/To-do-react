@@ -52,11 +52,11 @@ const List = ({data, setData, changeUpdate, setItemToUpdate}) => {
                   <label className={completed ? "completed" : ""} htmlFor={id}>{name}</label>
                 </div>
                 <div className="item-actions">
-                  <div className="update-logo">
-                    <UpdateLogo onClick={() => handleUpdateClick(id, name, completed)} />
+                  <div className="update-logo" onClick={() => handleUpdateClick(id, name, completed)} >
+                    <UpdateLogo />
                   </div>
-                  <div className="delete-logo">
-                    <DeleteLogo onClick={() => handleDeleteItem(id)  } />
+                  <div className="delete-logo" onClick={() => handleDeleteItem(id)  }>
+                    <DeleteLogo />
                   </div>
                 </div>
               </motion.article>)
