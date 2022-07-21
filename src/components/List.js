@@ -48,8 +48,8 @@ const List = ({data, setData, changeUpdate, setItemToUpdate}) => {
               exit={{ opacity: 0 }}
               >
                 <div className="item-name">
-                  <input className="item-input" onChange={(e)=>handleChecked(e, id)} type="checkbox" id={id} name={name} />
-                  <label className={completed ? "completed" : ""} htmlFor={name}>{name}</label>
+                  <input checked={completed} className="item-input" onChange={(e)=>handleChecked(e, id)} type="checkbox" id={id} name={name} />
+                  <label className={completed ? "completed" : ""} htmlFor={id}>{name}</label>
                 </div>
                 <div className="item-actions">
                   <div className="update-logo">
